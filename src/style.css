@@ -1,0 +1,30 @@
+.anim1{
+    width: 50px;
+    height: 50px;
+    background-color: cadetblue;
+}
+
+.anim2{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: blue;
+}
+
+
+.anim3{
+    width: 50px;
+    height: 50px;
+    border-radius: 20px 0 20px 0;
+    background-color: blue;
+}
+
+
+
+
+.elem-game{
+    width: 80px;
+    height: 80px;
+    background-color: darkorange;
+    border-radius: 20%;
+}
