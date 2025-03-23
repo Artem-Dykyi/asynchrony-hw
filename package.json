@@ -6,6 +6,7 @@
   "name": "asynchrony-hw",
   "description": "",
   "version": "1.0.0",
+  "homepage": "https://artem-dykyi.github.io/asynchrony-hw/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npx parcel src/index.html",
@@ -17,3 +18,5 @@
   "author": "",
   "license": "ISC"
 }
+
+
