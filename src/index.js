@@ -1,8 +1,10 @@
 //1//
+const secondText = document.querySelector(".second-text")
 let count = 0
 const textHelloInterval = setInterval(textInterval, 1000)
 
 function textInterval(){
+    secondText.textContent = `Hello ${count + 1}`
     console.log(`Hello${count + 1}`)
     count++
 
@@ -72,18 +74,22 @@ const elemGame = document.querySelector(".elem-game")
 const resultTime = document.querySelector(".result-time")
 const resultGame = document.querySelector(".result-game")
 
-
-const gameInterval = setInterval(resultTimer, 1000)
+let isGameActive = false;
+let gameInterval = null
 let countClick = 0
 let gameTimer = 10
 
-elemGame.addEventListener("click", ()=>{
-    countClick += 1
-    resultGame.textContent = `${countClick}`
-
-})
-
-
+elemGame.addEventListener("click", () => {
+    if (!isGameActive) {
+        isGameActive = true;
+        gameInterval = setInterval(resultTimer, 1000);
+    }
+    
+    if (gameTimer > 0) {
+        countClick += 1;
+        resultGame.textContent = `${countClick}`;
+    }
+});
 
 function resultTimer(){
     gameTimer -= 1
@@ -91,6 +97,8 @@ function resultTimer(){
     if (gameTimer === 0){
         resultTime.textContent = "Час вийшов"
         clearInterval(gameInterval)
+        elemGame.style.pointerEvents = "none";
     }
 }
+
 
